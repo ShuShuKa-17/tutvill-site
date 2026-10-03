@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3e4c7" />
+    <title>Тут был Тутвилл</title>
+    <meta name="description" content="Тут был Тутвилл" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23351a13'/%3E%3Cpath d='M15 18h34v8H36v26h-8V26H15z' fill='%23f3e4c7'/%3E%3C/svg%3E" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Unbounded:wght@500;700&display=swap');
+      :root { color-scheme: light; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        overflow-x: hidden;
+        color: #351a13;
+        background:
+          radial-gradient(ellipse at 45% 33%, rgba(255,255,255,.6), transparent 32rem),
+          repeating-linear-gradient(9deg, rgba(102,59,31,.032) 0 1px, transparent 1px 5px),
+          #f3e4c7;
+        font-family: Literata, Georgia, serif;
+      }
+      main {
+        width: min(92vw, 900px);
+        display: grid;
+        grid-template-columns: 1fr minmax(280px, 420px) 1fr;
+        align-items: center;
+        gap: clamp(1rem, 4vw, 4rem);
+        padding: 2rem 0;
+      }
+      .portal {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+      }
+      .portal::before, .portal::after {
+        content: '';
+        position: absolute;
+        border: 2px solid #5a271c;
+        border-radius: 50%;
+        inset: 1.2%;
+        transform: rotate(-3deg);
+      }
+      .portal::after { inset: 4.4%; border-color: rgba(90,39,28,.34); transform: rotate(5deg); }
+      .portal img {
+        position: relative;
+        z-index: 1;
+        width: 91%;
+        border-radius: 50%;
+        mix-blend-mode: multiply;
+        filter: saturate(.9) contrast(1.04);
+      }
+      nav { display: grid; gap: 1rem; }
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding: .88rem 1.05rem .82rem;
+        border: 1.5px solid #5a271c;
+        border-radius: .3rem;
+        background: rgba(255,249,235,.3);
+        box-shadow: 4px 4px 0 rgba(90,39,28,.17);
+        font-family: Unbounded, sans-serif;
+        font-size: clamp(.86rem, 1.5vw, 1.05rem);
+        line-height: 1.2;
+        transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+      }
+      a:nth-child(odd) { transform: rotate(-1.5deg); }
+      a:nth-child(even) { transform: rotate(1.1deg); }
+      a:hover, a:focus-visible { background: #351a13; color: #f8e9c9; box-shadow: 7px 7px 0 #9a2d18; outline: none; }
+      a:hover { transform: translate(-2px,-2px) rotate(0); }
+      a:focus-visible { outline: 3px solid #9a2d18; outline-offset: 4px; }
+      @media (max-width: 680px) {
+        main { grid-template-columns: 1fr; gap: 1.6rem; padding: 1.4rem 0 2rem; }
+        .portal { width: min(80vw, 390px); margin: auto; }
+        nav { grid-template-columns: 1fr 1fr; gap: .8rem; }
+        a { min-height: 4.3rem; display: grid; place-items: center; text-align: center; }
+      }
+      @media (prefers-reduced-motion: reduce) { a { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <main aria-label="Тут был Тутвилл">
+      <nav aria-label="Ссылки на сообщества слева">
+        <a href="https://dzen.ru/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">Дзен</a>
+        <a href="https://vk.ru/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+      </nav>
+      <div class="portal"><img src="tutvill.png" alt="Тутвилл" /></div>
+      <nav aria-label="Ссылки на сообщества справа">
+        <a href="https://ok.ru/group/70000058510160" target="_blank" rel="noopener noreferrer">Одноклассники</a>
+        <a href="https://t.me/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </nav>
+    </main>
+  </body>
+</html>
