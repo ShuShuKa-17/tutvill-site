@@ -56,6 +56,23 @@
         mix-blend-mode: multiply;
         filter: saturate(.9) contrast(1.04);
       }
+      .brand {
+        display: grid;
+        justify-items: center;
+        gap: .9rem;
+      }
+      .tagline {
+        max-width: 24rem;
+        margin: 0;
+        color: #5a271c;
+        font-family: Unbounded, sans-serif;
+        font-size: clamp(.68rem, 1vw, .82rem);
+        font-weight: 500;
+        line-height: 1.55;
+        letter-spacing: .045em;
+        text-align: center;
+        text-transform: uppercase;
+      }
       nav { display: grid; gap: 1rem; }
       a {
         color: inherit;
@@ -91,7 +108,10 @@
         <a href="https://dzen.ru/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">Дзен</a>
         <a href="https://vk.ru/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
       </nav>
-      <div class="portal"><img src="tutvill.png" alt="Тутвилл" /></div>
+      <div class="brand">
+        <div class="portal"><img src="tutvill.png" alt="Тутвилл" /></div>
+        <p class="tagline">Реальные новости и авторский юмор</p>
+      </div>
       <nav aria-label="Ссылки на сообщества справа">
         <a href="https://ok.ru/group/70000058510160" target="_blank" rel="noopener noreferrer">Одноклассники</a>
         <a href="https://t.me/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">Telegram</a>
