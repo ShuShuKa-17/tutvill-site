@@ -8,7 +8,7 @@
             document.addEventListener('click', function(event) {
         var link = event.target.closest('a[href]');
         if (!link) return;
-        var goal = {
+        var goal = link.dataset.goal || {
           'https://dzen.ru/tut_byl_tutvill': 'click_dzen',
           'https://vk.ru/tut_byl_tutvill': 'click_vk',
           'https://ok.ru/group/70000058510160': 'click_ok',
@@ -122,7 +122,7 @@
   <body>
     <main aria-label="Тут был Тутвилл">
       <nav aria-label="Ссылки на сообщества слева">
-        <a href="https://dzen.ru/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">Дзен</a>
+        <a href="/dzen.html" data-goal="click_dzen">Дзен</a>
         <a href="https://vk.ru/tut_byl_tutvill" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
       </nav>
       <div class="brand">
